@@ -9,8 +9,8 @@
 
 _For this project, we expect you to look at these concepts:_
 
--   [Everything you need to know to start coding your own shell](https://github.com/MASMIYEN/simple_shell/blob/master/MD/exercices.md)
--   [Approaching a Project](https://github.com/MASMIYEN/simple_shell/blob/master/MD/project.md)
+-   [Everything you need to know to start coding your own shell](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/exercices.md)
+-   [Approaching a Project](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/project.md)
 
 ## Background Context
 
