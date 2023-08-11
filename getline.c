@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * _getline - get line
  * @lineptr: pointer to line
