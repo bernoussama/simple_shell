@@ -20,9 +20,9 @@ Write a simple UNIX command interpreter.
 
 **Read or watch**:
 
--   [Unix shell](https://intranet.alxswe.com/rltoken/f0YU9TAhniMXWlSXtb64Yw "Unix shell")
--   [Thompson shell](https://intranet.alxswe.com/rltoken/7LJOp2qP7qHUcsOK2-F3qA "Thompson shell")
--   [Ken Thompson](https://intranet.alxswe.com/rltoken/wTSu31ZP1f7fFTJFgRQC7w "Ken Thompson")
+-   [Unix shell](https://en.wikipedia.org/wiki/Unix_shell "Unix shell")
+-   [Thompson shell](https://en.wikipedia.org/wiki/Thompson_shell "Thompson shell")
+-   [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson "Ken Thompson")
 -   **Everything you need to know to start coding your own shell**  concept page
 
 **man or help**:
