@@ -15,7 +15,7 @@ void _puts(char *str)
  * _putchar - prints a character
  * @c: character to print
  *
- * Return: return value of write syscall
+ * Return: return value of write
  */
 int _putchar(char c)
 {
