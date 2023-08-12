@@ -15,6 +15,10 @@
 #include <errno.h>
 
 /* FUNCTIONS */
+int prompt(void);
+int _whitespace(char c);
+
+/* MORE FUNCTIONS */
 void _puts(char *str);
 int _putchar(char c);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
