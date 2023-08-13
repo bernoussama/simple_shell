@@ -1,3 +1,4 @@
+#include "shell.h"
 /**
  * _splitter - counts the number of paths in PATH
  * @s: pointer to PATH string
