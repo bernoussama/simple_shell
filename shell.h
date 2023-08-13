@@ -24,6 +24,9 @@ int _putchar(char c);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *_memset(char *s, char b, unsigned int n);
 
+/* TOKENIZE FUNCTIONS */
+int _splitter(char *s);
+
 /* STRINGS FUNCTIONS */
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
