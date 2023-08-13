@@ -22,6 +22,7 @@ int _whitespace(char c);
 void _puts(char *str);
 int _putchar(char c);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+char *_memset(char *s, char b, unsigned int n);
 
 /* STRINGS FUNCTIONS */
 char *_strcat(char *dest, char *src);
