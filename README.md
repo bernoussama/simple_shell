@@ -61,7 +61,6 @@ $ echo "qwerty" | /bin/sh
 $ echo "qwerty" | /bin/../bin/sh
 /bin/../bin/sh: 1: qwerty: not found
 $
-
 ```
 
 Same error with your program  `hsh`:
@@ -72,8 +71,6 @@ $ echo "qwerty" | ./hsh
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
-
-
 ```
 
 ### List of allowed functions and system calls
@@ -116,7 +113,6 @@ Your shell will be compiled this way:
 
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-
 ```
 
 ### Testing
@@ -130,7 +126,6 @@ hsh main.c shell.c
 ($)
 ($) exit
 $
-
 ```
 
 But also in non-interactive mode:
@@ -147,3 +142,4 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
+```
