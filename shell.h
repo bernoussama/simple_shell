@@ -1,6 +1,9 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
+#define TOKEN_BUFFER_SIZE 64
+#define TOKEN_DELIMITERS " \t\n"
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -13,6 +16,7 @@
 #include <signal.h>
 #include <stddef.h>
 #include <errno.h>
+
 
 /* FUNCTIONS */
 int prompt(void);
