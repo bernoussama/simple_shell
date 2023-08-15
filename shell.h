@@ -24,7 +24,7 @@ int _putchar(char c);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *_memset(char *s, char b, unsigned int n);
 
-/* TOKENIZE FUNCTIONS */
+/* TOKENIZE/PATH FUNCTIONS */
 int _splitter(char *s);
 int _cmpath(const char *str1, const char *str2);
 
@@ -35,6 +35,7 @@ int _strcmp(char *s1, char *s2);
 char *_strdup(char *str);
 char *_strncpy(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
+int _strplitter(char *s)
 
 
 #endif
