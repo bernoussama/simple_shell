@@ -36,7 +36,7 @@ int _strcmp(char *s1, char *s2);
 char *_strdup(char *str);
 char *_strncpy(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
-int _strsep(char *s);
+int _strsplitter(char *s);
 
 
 #endif
