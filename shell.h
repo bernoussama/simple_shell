@@ -27,6 +27,7 @@ char *_memset(char *s, char b, unsigned int n);
 /* TOKENIZE/PATH FUNCTIONS */
 int _splitter(char *s);
 int _cmpath(const char *str1, const char *str2);
+char *_cmpcat(char *str, char **av, char *token);
 
 /* STRINGS FUNCTIONS */
 char *_strcat(char *dest, char *src);
@@ -35,7 +36,7 @@ int _strcmp(char *s1, char *s2);
 char *_strdup(char *str);
 char *_strncpy(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
-int _strplitter(char *s)
+int _strplitter(char *s);
 
 
 #endif
