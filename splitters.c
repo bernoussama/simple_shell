@@ -23,7 +23,7 @@ int _splitter(char *s)
  *
  * Return: number of words
  */
-int _strplitter(char *s)
+int _strsep(char *s)
 {
   int i, count = 0;
   for (i = 0; s[i]; i++)
