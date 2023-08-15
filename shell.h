@@ -43,5 +43,8 @@ char *_strncpy(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 int _strsplitter(char *s);
 
+/* ENVIRON FUNCTIONS */
+void _environ(void);
+char *_getenviron(const char *name);
 
 #endif
