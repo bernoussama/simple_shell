@@ -21,6 +21,8 @@
 /* FUNCTIONS */
 int prompt(void);
 int _whitespace(char c);
+int builtinschecker(char **av, char *buff, int exitstatus);
+void free_args(char **av);
 
 /* MORE FUNCTIONS */
 void _puts(char *str);
