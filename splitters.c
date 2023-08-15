@@ -17,3 +17,20 @@ int _splitter(char *s)
   }
   return (count);
 }
+/**
+ * _strplitter - gets number of words in string
+ * @s: pointer to string
+ *
+ * Return: number of words
+ */
+int _strplitter(char *s)
+{
+  int i, count = 0;
+  for (i = 0; s[i]; i++)
+  {
+    if (s[i] != ' ' && (i == 0 || s[i - 1] != ' '))
+	{
+      count++;
+    }
+  }
+  return (count);
