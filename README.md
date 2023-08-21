@@ -1,5 +1,5 @@
 
-<img src="https://aceworldpub.com.ng/wp-content/uploads/2022/03/unnamed.png" width="200" height="100"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="200" height="90"> 
+<img src="https://aceworldpub.com.ng/wp-content/uploads/2022/03/unnamed.png" width="200" > <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="200" >
 
 # 0x16. C - Simple Shell
 

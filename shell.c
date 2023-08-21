@@ -8,24 +8,21 @@ int main(int argc, char **argv)
 	ssize_t nread;
 	char *line = NULL;
 	size_t len = 0;
-	int ac;
 
-	pid_t my_pid;
 	pid_t pid;
 
-	ac = argc;
+	if (argc > TOKEN_NUM)
+		return (1);
+
 	prog_name = argv[0];
 
-	/*! TODO: replace printf
-	 *  \todo replace printf
-	 */
-	printf("$ ");
+	prompt();
 
 	/* get arguments typed before hitting enter */
 	while ((nread = getline(&line, &len, stdin)) != -1)
 	{
 		/*strtok array */
-		char *array[nread];
+		char *array[TOKEN_NUM];
 		/*strtok token */
 		char *token = NULL;
 		size_t i = 0;
@@ -34,7 +31,7 @@ int main(int argc, char **argv)
 
 		if (nread == 0)
 		{
-			printf("#CisTheDevil$ ");
+			prompt();
 		}
 		else
 		{
@@ -58,13 +55,11 @@ int main(int argc, char **argv)
 			}
 			if (pid == 0)
 			{
-				my_pid = getpid();
 				if (execve(array[0], array, NULL))
 				{
 					/*! TODO: printf to remove
 					 *  \todo printf to remove
 					 */
-					printf("Execution Error");
 					perror(prog_name);
 					return (1);
 				}
@@ -75,7 +70,7 @@ int main(int argc, char **argv)
 				wait(&status);
 			}
 		}
-		printf("$ ");
+		prompt();
 	}
 
 	printf("\n");
