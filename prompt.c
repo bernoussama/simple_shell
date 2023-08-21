@@ -1,10 +1,15 @@
 #include "shell.h"
-#include <unistd.h>
 
-void prompt(void)
+/**
+ * prompt - shows the prompt
+ * @sign: sign to show as prompt
+ *
+ *
+ * Return: void
+ */
+void prompt(char *sign)
 {
 	int count;
-	char *sign = "$ ";
 	size_t n = _strlen(sign);
 
 	if (isatty(STDIN_FILENO) == 1)

@@ -16,8 +16,10 @@ extern char **environ;
 
 #define TOKEN_NUM 255
 
-void tokenize(char *str, char **array[]);
-void prompt(void);
+void tokenize(char *str, char *array[]);
+void prompt(char *sign);
 size_t _strlen(char *str);
+void run_shell(char *prog_name, char *sign, char *line, size_t nread);
+void execmd(char *prog_name, char **tokens);
 
 #endif

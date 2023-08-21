@@ -18,7 +18,7 @@ echo "/bin/ls" | ./bin/hsh
 # test_ls test
 echo "running test_ls"
 
-printf "/bin/ls\n/bin/ls" > test_ls
+printf "/bin/ls\n/bin/ls\n" > test_ls
 cat test_ls | ./bin/hsh
 
 
