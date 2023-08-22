@@ -7,24 +7,38 @@ betty ./*.c
 
 
 # compile
-echo "compile ..."
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 ./*.c -o bin/hsh
+echo "compiling ..."
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 ./*.c -o ./bin/hsh
 
-# /bin/ls test
-echo "testing /bin/ls"
+gcc_ret=$?
+if [[ gcc_ret -eq 0 ]]; then
+    echo "Compiled succesfully"
 
-echo "/bin/ls" | ./bin/hsh
+    # /bin/ls test
+    echo "testing /bin/ls"
 
-# test_ls test
-echo "running test_ls"
+    echo "/bin/ls" | ./bin/hsh
 
-printf "/bin/ls\n/bin/ls\n" > test_ls
-cat test_ls | ./bin/hsh
+    # test_ls test
+    echo "running test_ls"
+
+    printf "/bin/ls\n/bin/ls\n" > test_ls
+    cat test_ls | ./bin/hsh
 
 
-# error meages test
-echo "Testing error mesages"
+    # error meages test
+    echo "Testing error mesages"
 
-echo "qwerty" | /bin/sh
-# the error message of hsh should be the same as sh
-echo "qwerty" | ./bin/hsh
+    echo "qwerty" | /bin/sh
+    # the error message of hsh should be the same as sh
+    echo "qwerty" | ./bin/hsh
+
+    echo "testing env ..."
+    echo "env" | ./bin/hsh
+
+    echo "testing exit ..."
+    echo "exit" | ./bin/hsh
+else
+    echo "Compilation Failed!!"
+
+fi

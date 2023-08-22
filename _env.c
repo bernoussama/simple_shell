@@ -1,6 +1,4 @@
 #include "shell.h"
-#include <stdio.h>
-#include <unistd.h>
 
 /**
  * _env - prints the environ variables
