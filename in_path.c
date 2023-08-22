@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * in_path - checks if command is in path
+ *
+ * @command: command string
+ * @tokens: tokens array
+ *
+ * Return:  1 if command in path 0 if not
+ */
 ssize_t in_path(char *command, char **tokens)
 {
 	char *abs_path;
