@@ -40,5 +40,8 @@ int compare_env(const char *env_str, const char *var);
 char *concat(char *str1, char *str2);
 void free_path_list(PATH_T *head);
 ssize_t in_path(char *command, char **tokens);
+void my_exit(int i);
+size_t comp_str(char *str1, char *str2);
+void _env(char **environ);
 
 #endif

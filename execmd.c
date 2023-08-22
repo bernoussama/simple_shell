@@ -25,7 +25,7 @@ void execmd(char *prog_name, char **tokens)
 	}
 	if (pid == 0)
 	{
-		if (execve(command, tokens, NULL))
+		if (execve(command, tokens, environ))
 		{
 			perror(prog_name);
 			exit(1);

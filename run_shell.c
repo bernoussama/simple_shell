@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -32,7 +33,16 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		command = tokens[0];
 
 		is_f = is_exec(command);
-		if (is_f == 1)
+		if (comp_str(command, "exit") == 0)
+		{
+			free(line);
+			my_exit(0);
+		}
+		else if (comp_str(command, "env") == 0)
+		{
+			_env(environ);
+		}
+		else if (is_f == 1)
 		{
 			execmd(prog_name, tokens);
 		}
@@ -40,6 +50,9 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		{
 			execmd(prog_name, tokens);
 			free(tokens[0]);
+		}
+		else {
+			perror(prog_name);
 		}
 	}
 	prompt(sign);
