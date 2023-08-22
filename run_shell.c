@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdlib.h>
 
 /**
  * run_shell - run the shell
@@ -15,7 +16,8 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 
 	/*tokens array */
 	char *tokens[TOKEN_NUM];
-
+	char *command;
+	ssize_t is_f;
 
 	if (nread == 0)
 	{
@@ -27,8 +29,18 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		line[nread - 1] = '\0';
 
 		tokenize(line, tokens);
+		command = tokens[0];
 
-		execmd(prog_name, tokens);
+		is_f = is_exec(command);
+		if (is_f == 1)
+		{
+			execmd(prog_name, tokens);
+		}
+		else if (in_path(command, tokens) == 1)
+		{
+			execmd(prog_name, tokens);
+			free(tokens[0]);
+		}
 	}
 	prompt(sign);
 }

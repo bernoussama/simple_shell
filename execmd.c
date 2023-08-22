@@ -12,9 +12,11 @@
 void execmd(char *prog_name, char **tokens)
 {
 	pid_t pid;
+	char *command;
 	/* wait status */
 	int status;
 
+	command = tokens[0];
 	pid = fork();
 	if (pid == -1)
 	{
@@ -23,7 +25,7 @@ void execmd(char *prog_name, char **tokens)
 	}
 	if (pid == 0)
 	{
-		if (execve(tokens[0], tokens, NULL))
+		if (execve(command, tokens, NULL))
 		{
 			perror(prog_name);
 			exit(1);
