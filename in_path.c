@@ -17,19 +17,20 @@ ssize_t in_path(char *command, char **tokens)
 	for (tmp = path_list; tmp; tmp = tmp->next)
 	{
 		abs_path = concat(tmp->dir, command);
+		printf("%s\n", abs_path);
 		/* check if abs_path is executable */
 		if (is_exec(abs_path))
 		{
-            tokens[0] = _strdup(abs_path);
+			tokens[0] = _strdup(abs_path);
 			free_path_list(path_list);
 			free(abs_path);
-            free(path);
+			free(path);
 			return (1);
 		}
+		free(abs_path);
 	}
 
 	free_path_list(path_list);
-	free(abs_path);
-    free(path);
+	free(path);
 	return (0);
 }

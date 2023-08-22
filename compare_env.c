@@ -23,6 +23,6 @@ int compare_env(const char *env_str, const char *var)
 	}
 	else
 	{
-		return (1);
+	return (1);
 	}
 }

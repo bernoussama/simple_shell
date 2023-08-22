@@ -18,7 +18,7 @@ char *concat(char *str1, char *str2)
 		return (NULL);
 	}
 
-	concatd = malloc(_strlen(str1) + _strlen(str2) + 1);
+	concatd = malloc(_strlen(str1) + _strlen(str2) + 2);
 	if (!concatd)
 	{
 		free(concatd);
@@ -26,8 +26,10 @@ char *concat(char *str1, char *str2)
 	}
 	for (i = 0; str1[i] != '\0'; i++)
 	{
-		concatd[i] = str1[0];
+		concatd[i] = str1[i];
 	}
+
+	concatd[i++] = '/';
 
 	for (j = 0; str2[j] != '\0'; j++, i++)
 	{
