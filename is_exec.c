@@ -1,6 +1,13 @@
 
 #include "shell.h"
 
+/**
+ * is_exec - checks if file is executable
+ *
+ * @path: path of the file
+ *
+ * Return: 1 if file is executable 0 if not
+ */
 ssize_t is_exec(char *path)
 {
 

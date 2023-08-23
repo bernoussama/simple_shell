@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * get_path_list - makes a path linked list
+ *
+ * @path: path env variable string
+ *
+ * Return: head of the path list
+ */
 PATH_T *get_path_list(char *path)
 {
 	PATH_T *head;

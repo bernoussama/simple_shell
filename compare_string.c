@@ -1,5 +1,13 @@
 #include "shell.h"
 
+/**
+ * comp_str - compare two strings
+ *
+ * @str1: first string
+ * @str2: second string
+ *
+ * Return: 0 if identical 1 if not
+ */
 size_t comp_str(char *str1, char *str2)
 {
 

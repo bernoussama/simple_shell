@@ -54,3 +54,6 @@ dkms.conf
 # Build dir
 build/
 bin/
+
+# Tests dir
+tests/
