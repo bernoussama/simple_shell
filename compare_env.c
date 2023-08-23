@@ -1,5 +1,14 @@
 #include "shell.h"
 
+/**
+ * compare_env - checks if string is an env variable
+ * @env_str: the env variable
+ * @var: the string variable to check
+ *
+ * Description: Longer description of the function)?
+ *
+ * Return: 0 if true 1 if false
+ */
 int compare_env(const char *env_str, const char *var)
 {
 
