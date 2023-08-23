@@ -43,5 +43,6 @@ ssize_t in_path(char *command, char **tokens);
 void my_exit(int i);
 size_t comp_str(char *str1, char *str2);
 void _env(char **environ);
+size_t is_whitespace(char c);
 
 #endif
