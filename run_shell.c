@@ -41,11 +41,6 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 			_env(environ);
 		else if (is_f == 1)
 			execmd(prog_name, tokens);
-		else if (in_path(command, tokens) == 1)
-		{
-			execmd(prog_name, tokens);
-			free(tokens[0]);
-		}
 		else
 			perror(prog_name);
 	}
