@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * _strdup - duplicate string
+ *
+ * @str: string to duplicate
+ *
+ * Return: a pointer to the duplicated string
+ */
 char *_strdup(char *str)
 {
 	char *new_str;
