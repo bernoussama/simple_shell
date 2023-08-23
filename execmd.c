@@ -20,7 +20,7 @@ void execmd(char *prog_name, char **tokens)
 	pid = fork();
 	if (pid == -1)
 	{
-		perror("Fork Error");
+		perror(prog_name);
 		exit(1);
 	}
 	if (pid == 0)
