@@ -30,7 +30,9 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		command = tokens[0];
 
 		is_f = is_exec(command);
-		if (comp_str(command, "exit") == 0)
+		if (!command)
+			;
+		else if (comp_str(command, "exit") == 0)
 		{
 			free(line);
 			my_exit(0);
@@ -44,6 +46,8 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 			execmd(prog_name, tokens);
 			free(tokens[0]);
 		}
+		else
+			perror(prog_name);
 	}
 	prompt(sign);
 }
