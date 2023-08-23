@@ -14,16 +14,13 @@
  */
 void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 {
-
 	/*tokens array */
 	char *tokens[TOKEN_NUM];
 	char *command;
 	ssize_t is_f;
 
 	if (nread == 0)
-	{
 		prompt(sign);
-	}
 	else
 	{
 		/*remove the newline character from the end of line */
@@ -39,22 +36,16 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 			my_exit(0);
 		}
 		else if (comp_str(command, "env") == 0)
-		{
 			_env(environ);
-		}
 		else if (is_f == 1)
-		{
 			execmd(prog_name, tokens);
-		}
 		else if (in_path(command, tokens) == 1)
 		{
 			execmd(prog_name, tokens);
 			free(tokens[0]);
 		}
 		else
-		{
 			perror(prog_name);
-		}
 	}
 	prompt(sign);
 }

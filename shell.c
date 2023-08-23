@@ -32,7 +32,5 @@ int main(int argc, char **argv)
 	}
 	free(line);
 
-	write(STDOUT_FILENO, "\n", 1);
-
 	return (0);
 }
