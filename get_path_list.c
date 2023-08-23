@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdlib.h>
 
 /**
  * get_path_list - makes a path linked list
@@ -21,6 +22,11 @@ PATH_T *get_path_list(char *path)
 	tmp = NULL;
 
 	head = malloc(sizeof(PATH_T));
+	if (!head)
+	{
+		free(head);
+		return (NULL);
+	}
 
 	if (!head)
 		return (NULL);
@@ -35,7 +41,11 @@ PATH_T *get_path_list(char *path)
 	{
 		(tmp)->next = malloc(sizeof(PATH_T));
 		if (!(tmp)->next)
+		{
+			free(tmp->next);
 			return (NULL);
+		}
+
 		(tmp) = (tmp)->next;
 		(tmp)->dir = _strdup(token);
 		token = strtok(NULL, ":");
