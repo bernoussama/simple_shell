@@ -44,8 +44,6 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 			execmd(prog_name, tokens);
 			free(tokens[0]);
 		}
-		else
-			perror(prog_name);
 	}
 	prompt(sign);
 }
