@@ -26,7 +26,10 @@ char *_strdup(char *str)
 
 	new_str = (char *)malloc((len + 1));
 	if (!new_str)
+	{
+		free(new_str);
 		return (NULL);
+	}
 
 	/* copy str content to new_str including '\0' */
 	for (i = 0; i < len; i++)
