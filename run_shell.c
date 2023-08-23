@@ -30,7 +30,7 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		command = tokens[0];
 
 		is_f = is_exec(command);
-		if (!command)
+		if (!command || is_whitespace(*command))
 			;
 		else if (comp_str(command, "exit") == 0)
 		{
