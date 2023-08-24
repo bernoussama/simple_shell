@@ -30,7 +30,7 @@ size_t _strlen(char *str);
 /* UTILS */
 void tokenize(char *str, char *array[]);
 void prompt(char *sign);
-void run_shell(char *prog_name, char *sign, char *line, size_t nread);
+void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lines);
 void execmd(char *prog_name, char **tokens);
 ssize_t is_file(char *path);
 ssize_t is_exec(char *path);
@@ -44,5 +44,7 @@ void my_exit(int i);
 size_t comp_str(char *str1, char *str2);
 void _env(char **environ);
 size_t is_whitespace(char c);
+int print_d(int n);
+void printerr(char *prog_name, size_t lines, char *command);
 
 #endif
