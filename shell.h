@@ -15,7 +15,6 @@
 
 extern char **environ;
 
-
 #define TOKEN_NUM 255
 
 typedef struct PATH
@@ -31,7 +30,8 @@ size_t _strlen(char *str);
 /* UTILS */
 void tokenize(char *str, char *array[]);
 void prompt(char *sign);
-void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lines, int last_exit_code);
+void run_shell(char *prog_name, char *sign, char *line, size_t nread,
+	       size_t lines, int last_exit_code);
 int execmd(char *prog_name, char **tokens);
 ssize_t is_file(char *path);
 ssize_t is_exec(char *path);
