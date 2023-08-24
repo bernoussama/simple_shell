@@ -4,6 +4,15 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/**
+ * printerr - print error message
+ *
+ * @prog_name: name of the program
+ * @lines : lines run
+ * @command : the invalidd command
+ *
+ * Return: void
+ */
 void printerr(char *prog_name, size_t lines, char *command)
 {
 	char *error_prefix = ": ";
