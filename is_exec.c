@@ -1,5 +1,6 @@
 
 #include "shell.h"
+#include <stdio.h>
 
 /**
  * is_exec - checks if file is executable

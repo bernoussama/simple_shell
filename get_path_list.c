@@ -10,11 +10,13 @@
  */
 PATH_T *get_path_list(char *path)
 {
-	PATH_T *head = NULL, *tmp = NULL;
+	PATH_T *head, *tmp;
 	char *token;
 
 	if (!path)
 		return (NULL);
+	head = NULL;
+	tmp = NULL;
 	head = malloc(sizeof(PATH_T));
 	if (!head)
 	{
