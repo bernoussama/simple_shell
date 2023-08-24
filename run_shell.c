@@ -32,7 +32,6 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread,
 
 		tokenize(line, tokens);
 		command = tokens[0];
-
 		is_f = is_exec(command);
 		if (!command || is_whitespace(*command))
 			;
@@ -47,7 +46,14 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread,
 			last_exit_code = 0;
 		}
 		else if (is_f == 1)
+		{
 			last_exit_code = execmd(prog_name, tokens);
+		}
+		else if (in_path(command, tokens) == 1)
+		{
+			execmd(prog_name, tokens);
+			free(tokens[0]);
+		}
 		else
 			printerr(prog_name, lines, command);
 	}
