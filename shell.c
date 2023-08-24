@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	char *sign;
 	ssize_t nread;
 	char *line = NULL;
-	size_t lines;
+	size_t lines = 1;
 	size_t len = 0;
 	int last_exit_code = 0;
 
@@ -35,5 +35,5 @@ int main(int argc, char **argv)
 	}
 	free(line);
 
-	return (0);
+	exit(last_exit_code);
 }

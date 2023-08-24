@@ -27,9 +27,7 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread,
 		prompt(sign);
 	else
 	{
-		/*remove the newline character from the end of line */
 		line[nread - 1] = '\0';
-
 		tokenize(line, tokens);
 		command = tokens[0];
 		is_f = is_exec(command);
@@ -46,16 +44,17 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread,
 			last_exit_code = 0;
 		}
 		else if (is_f == 1)
-		{
 			last_exit_code = execmd(prog_name, tokens);
-		}
 		else if (in_path(command, tokens) == 1)
 		{
 			execmd(prog_name, tokens);
 			free(tokens[0]);
 		}
 		else
+		{
 			printerr(prog_name, lines, command);
+			last_exit_code = 127;
+		}
 	}
 	prompt(sign);
 }
