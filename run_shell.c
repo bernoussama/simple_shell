@@ -10,6 +10,7 @@
  * @sign: the prompt sign
  * @line: the command line
  * @nread: chars read by getline
+ * @lines: lines run
  *
  * Return: void
  */
