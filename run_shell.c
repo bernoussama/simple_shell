@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +13,7 @@
  *
  * Return: void
  */
-void run_shell(char *prog_name, char *sign, char *line, size_t nread)
+void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lines)
 {
 	/*tokens array */
 	char *tokens[TOKEN_NUM];
@@ -42,7 +43,7 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread)
 		else if (is_f == 1)
 			execmd(prog_name, tokens);
 		else
-			perror(prog_name);
+			printerr(prog_name, lines, command);
 	}
 	prompt(sign);
 }

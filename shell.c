@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stddef.h>
 
 /**
  * main  - simple shell program
@@ -14,6 +15,7 @@ int main(int argc, char **argv)
 	char *sign;
 	ssize_t nread;
 	char *line = NULL;
+	size_t lines;
 	size_t len = 0;
 
 
@@ -28,7 +30,8 @@ int main(int argc, char **argv)
 	/* get arguments typed before hitting enter */
 	while ((nread = getline(&line, &len, stdin)) != -1)
 	{
-		run_shell(prog_name, sign, line, nread);
+		run_shell(prog_name, sign, line, nread, lines);
+		lines++;
 	}
 	free(line);
 
