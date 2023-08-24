@@ -14,7 +14,8 @@
  *
  * Return: void
  */
-void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lines)
+void run_shell(char *prog_name, char *sign, char *line, size_t nread,
+	       size_t lines)
 {
 	/*tokens array */
 	char *tokens[TOKEN_NUM];
