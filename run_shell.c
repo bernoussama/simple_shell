@@ -10,10 +10,13 @@
  * @sign: the prompt sign
  * @line: the command line
  * @nread: chars read by getline
+ * @lines: lines run
+ * @last_exit_code: lines run
  *
  * Return: void
  */
-void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lines)
+void run_shell(char *prog_name, char *sign, char *line, size_t nread,
+	       size_t lines, int last_exit_code)
 {
 	/*tokens array */
 	char *tokens[TOKEN_NUM];
@@ -36,12 +39,15 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread, size_t lin
 		else if (comp_str(command, "exit") == 0)
 		{
 			free(line);
-			my_exit(0);
+			my_exit(last_exit_code);
 		}
 		else if (comp_str(command, "env") == 0)
+		{
 			_env(environ);
+			last_exit_code = 0;
+		}
 		else if (is_f == 1)
-			execmd(prog_name, tokens);
+			last_exit_code = execmd(prog_name, tokens);
 		else
 			printerr(prog_name, lines, command);
 	}

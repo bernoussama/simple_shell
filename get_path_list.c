@@ -10,31 +10,21 @@
  */
 PATH_T *get_path_list(char *path)
 {
-	PATH_T *head;
-	PATH_T *tmp;
-
+	PATH_T *head = NULL, *tmp = NULL;
 	char *token;
 
 	if (!path)
 		return (NULL);
-
-	head = NULL;
-	tmp = NULL;
-
 	head = malloc(sizeof(PATH_T));
 	if (!head)
 	{
 		free(head);
 		return (NULL);
 	}
-
 	if (!head)
 		return (NULL);
-
 	token = strtok(path + 5, ":");
-
 	head->dir = _strdup(token);
-
 	tmp = (PATH_T *)head;
 	token = strtok(NULL, ":");
 	while (token != NULL)
@@ -45,12 +35,10 @@ PATH_T *get_path_list(char *path)
 			free(tmp->next);
 			return (NULL);
 		}
-
 		(tmp) = (tmp)->next;
 		(tmp)->dir = _strdup(token);
 		token = strtok(NULL, ":");
 	}
 	(tmp)->next = NULL;
-
 	return (head);
 }
