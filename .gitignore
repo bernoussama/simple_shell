@@ -52,7 +52,6 @@ Mkfile.old
 dkms.conf
 
 # Build dir
-build/
 bin/
 
 # Tests dir
