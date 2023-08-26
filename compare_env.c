@@ -17,14 +17,16 @@ int compare_env(const char *env_str, const char *var)
 		return (1);
 	}
 
-	while (*var && *env_str && *env_str != '=')
+	while (*var && *env_str != '=')
 	{
 		if (*env_str != *var)
 		{
 			return (1);
 		}
-		env_str++;
-		var++;
+		env_str++, var++;
 	}
-	return (0);
+	if (!*var && *env_str == '=')
+		return (0);
+	else
+		return (1);
 }
