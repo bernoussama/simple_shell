@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include <errno.h>
 
 /**
  * execmd - execute a command
@@ -14,7 +14,7 @@ int execmd(char *prog_name, char **tokens)
 	pid_t pid;
 	char *command;
 	/* wait status */
-	int status = 0;
+	int status;
 
 	command = tokens[0];
 	pid = fork();
@@ -28,13 +28,20 @@ int execmd(char *prog_name, char **tokens)
 		if (execve(command, tokens, environ))
 		{
 			perror(prog_name);
-			exit(2);
+			exit(errno);
 		}
 		exit(0);
 	}
 	else
 	{
 		wait(&status);
-		return (status);
+		if (WIFEXITED(status))
+		{
+			return WEXITSTATUS(status);
+		}
+		else
+		{
+			return (errno);
+		}
 	}
 }

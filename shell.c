@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	/* get arguments typed before hitting enter */
 	while ((nread = getline(&line, &len, stdin)) != -1)
 	{
-		run_shell(prog_name, sign, line, nread, lines, last_exit_code);
+		run_shell(prog_name, sign, line, nread, lines, &last_exit_code);
 		lines++;
 	}
 	free(line);
