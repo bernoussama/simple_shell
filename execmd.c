@@ -37,7 +37,7 @@ int execmd(char *prog_name, char **tokens)
 		wait(&status);
 		if (WIFEXITED(status))
 		{
-			return WEXITSTATUS(status);
+			return (WEXITSTATUS(status));
 		}
 		else
 		{
