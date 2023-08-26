@@ -12,6 +12,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <errno.h>
 
 extern char **environ;
 
@@ -31,7 +32,7 @@ size_t _strlen(char *str);
 void tokenize(char *str, char *array[]);
 void prompt(char *sign);
 void run_shell(char *prog_name, char *sign, char *line, size_t nread,
-	       size_t lines, int last_exit_code);
+	       size_t lines, int *last_exit_code);
 int execmd(char *prog_name, char **tokens);
 ssize_t is_file(char *path);
 ssize_t is_exec(char *path);
