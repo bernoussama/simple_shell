@@ -53,7 +53,7 @@ void run_shell(char *prog_name, char *sign, char *line, size_t nread,
 		else
 		{
 			printerr(prog_name, lines, command);
-			*last_exit_code = errno;
+			*last_exit_code = 127;
 		}
 	}
 	prompt(sign);
