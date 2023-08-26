@@ -1,5 +1,6 @@
 #include "shell.h"
 #include <stddef.h>
+#include <unistd.h>
 
 /**
  * main  - simple shell program
@@ -34,6 +35,9 @@ int main(int argc, char **argv)
 		lines++;
 	}
 	free(line);
-
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		write(STDOUT_FILENO, "\n ", 1);
+	}
 	exit(last_exit_code);
 }
