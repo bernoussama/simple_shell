@@ -8,16 +8,22 @@
 
 #include <string.h>
 
+#include <errno.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <errno.h>
 
 extern char **environ;
 
 #define TOKEN_NUM 255
 
+/**
+ * struct PATH - path list struct
+ * @dir: dir string
+ * @next: next dir
+ *
+ */
 typedef struct PATH
 {
 	char *dir;

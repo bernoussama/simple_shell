@@ -17,7 +17,7 @@ int compare_env(const char *env_str, const char *var)
 		return (1);
 	}
 
-	while (*var && *env_str)
+	while (*var && *env_str && *env_str != '=')
 	{
 		if (*env_str != *var)
 		{
@@ -26,12 +26,5 @@ int compare_env(const char *env_str, const char *var)
 		env_str++;
 		var++;
 	}
-	if (*var == '\0')
-	{
-		return (0);
-	}
-	else
-	{
-	return (1);
-	}
+	return (0);
 }
