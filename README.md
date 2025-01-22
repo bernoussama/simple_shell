@@ -1,50 +1,10 @@
 
-<img src="https://aceworldpub.com.ng/wp-content/uploads/2022/03/unnamed.png" width="200" > <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="200" >
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="200" >
 
 # 0x16. C - Simple Shell
 
-**C,  Group project,  Syscall**
+A shell is a command-line interface that executes commands and manages processes. This is our own POSIX compliant shell that's capable of interpreting shell commands, running external programs and builtin commands like cd, pwd, echo and more.
 
-### Concepts
-
-_For this project, we expect you to look at these concepts:_
-
--   [Everything you need to know to start coding your own shell](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/exercices.md)
--   [Approaching a Project](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/project.md)
-
-## Background Context
-
-Write a simple UNIX command interpreter.
-
-## Resources
-
-**Read or watch**:
-
--   [Unix shell](https://en.wikipedia.org/wiki/Unix_shell "Unix shell")
--   [Thompson shell](https://en.wikipedia.org/wiki/Thompson_shell "Thompson shell")
--   [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson "Ken Thompson")
--   **Everything you need to know to start coding your own shell**  concept page
-
-**man or help**:
-
--   `sh`  (_Run  `sh`  as well_)
-
-### General
-
--   Who designed and implemented the original Unix operating system
--   Who wrote the first version of the UNIX shell
--   Who invented the B programming language (the direct predecessor to the C programming language)
--   Who is Ken Thompson
--   How does a shell work
--   What is a pid and a ppid
--   How to manipulate the environment of the current process
--   What is the difference between a function and a system call
--   How to create processes
--   What are the three prototypes of  `main`
--   How does the shell use the  `PATH`  to find the programs
--   How to execute another program with the  `execve`  system call
--   How to suspend the execution of a process until one of its children terminates
--   What is  `EOF`  / “end-of-file”?
 
 ## More Info
 
@@ -109,7 +69,7 @@ $
 
 ### Compilation
 
-Your shell will be compiled this way:
+Our shell is compiled this way:
 
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -117,7 +77,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ### Testing
 
-Your shell should work like this in interactive mode:
+Our shell work like this in interactive mode:
 
 ```
 $ ./hsh
@@ -143,3 +103,17 @@ hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
 ```
+
+### Concepts
+
+-   [Everything you need to know to start coding your own shell](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/exercices.md)
+-   [Approaching a Project](https://github.com/0ussamaBernou/simple_shell/blob/master/MD/project.md)
+
+
+## Resources
+
+
+-   [Unix shell](https://en.wikipedia.org/wiki/Unix_shell "Unix shell")
+-   [Thompson shell](https://en.wikipedia.org/wiki/Thompson_shell "Thompson shell")
+-   [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson "Ken Thompson")
+-   **Everything you need to know to start coding your own shell**  concept page
